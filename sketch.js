@@ -38,12 +38,17 @@ function draw() {
   fantasmaVerde.mover()
   fantasmaAmarillo.mover()
   fantasmaNaranja.mover()
+ 
 
   fantasmaVerde.getx();
 
   pacman.mostrar()
 
   
+}
+
+function keyPressed(){
+  pacman.mover(key)
 }
   
 
