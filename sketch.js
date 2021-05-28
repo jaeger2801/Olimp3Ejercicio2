@@ -27,6 +27,12 @@ function draw() {
 
   for(let i = 0; i < bolitas.length; i++) {
     bolitas[i].show();
+    
+  }
+  for(let i = 0; i < bolitas.length; i++)
+  if(pacman.Comer(bolitas[i].x, bolitas[i].y)){
+    bolitas.splice(bolitas[i]);
+    console.log("se la comió")
   }
 
   fantasmaVerde.mostrar()
@@ -44,12 +50,14 @@ function draw() {
 
   pacman.mostrar()
 
-  
-}
+ 
+  }
 
 function keyPressed(){
   pacman.mover(key)
 }
+
+
   
 
 

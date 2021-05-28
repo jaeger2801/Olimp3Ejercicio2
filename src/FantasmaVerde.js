@@ -13,7 +13,7 @@ mostrar(){
         rect(this.x, this.y, 50, 50);
         rectMode(CORNER);        
     }
-    
+   
     especial() {
         if (frameCount % 90 == 0) {
             this.cambiarDeDireccion();
