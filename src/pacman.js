@@ -7,10 +7,13 @@ class Pacman {
     this.comide = false;
    
 }
+setcomide(comide) {
+    this.comide = comide;
+  }
 
 
 Comer(x1, y1){
-if(dist(this.y, this.y, x1, y1)<20) {
+if(dist(this.y, this.y, x1, y1)<70) {
     return true; }
 
 }

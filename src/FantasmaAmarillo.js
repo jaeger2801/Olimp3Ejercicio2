@@ -6,13 +6,20 @@ class FantasmaAmarillo extends Fantasma{
         this.r = r;
         this.g = g;
         this.b = b;
+        
+        this.mostrando = true;
     }
-    mostrar(){
+
+    mostrar(chontaduro){
+        if(chontaduro == true){
+        
         fill(255, 177, 187);
         rectMode(CENTER);
         rect(this.x, this.y, 50, 50);
         rectMode(CORNER);        
+    
     }
+  }
     
     especial() {
         if (frameCount % 90 == 0) {

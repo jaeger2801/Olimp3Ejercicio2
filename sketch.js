@@ -25,18 +25,18 @@ function setup() {
 function draw() {
   background(30);
 
-  for(let i = 0; i < bolitas.length; i++) {
+  /*for(let i = 0; i < bolitas.length; i++) {
     bolitas[i].show();
     
-  }
-  for(let i = 0; i < bolitas.length; i++)
-  if(pacman.Comer(bolitas[i].x, bolitas[i].y)){
-    bolitas.splice(bolitas[i]);
+  }*/
+  /*for(let i = 0; i < fantasmaAmarillo.length; i++)
+  if(pacman.Comer(fantasmaAmarillo.x, fantasmaAmarillo.y)){
+    pacman.setcomide(true);
     console.log("se la comió")
-  }
+  }*/
 
   fantasmaVerde.mostrar()
-  fantasmaAmarillo.mostrar()
+  fantasmaAmarillo.mostrar(true)
   fantasmaRojo.mostrar()
   fantasmaNaranja.mostrar()
 
@@ -48,7 +48,14 @@ function draw() {
 
   fantasmaVerde.getx();
 
-  pacman.mostrar()
+  pacman.mostrar();
+
+  if (dist(pacman.x, pacman.y, fantasmaAmarillo.x, fantasmaAmarillo.y)<20) {
+    fantasmaAmarillo.mostrar(false);
+    console.log("watafac pacman, te la comiste")
+  }
+
+ 
 
  
   }
