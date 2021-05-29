@@ -8,11 +8,13 @@ class FantasmaVerde extends Fantasma{
    this.b = b;
 }
 mostrar(){
-    fill(0, 255, 255);
-    rectMode(CENTER);
+    if(this.alive){
+        fill(0, 255, 255); // por qué no usar el rgb ?
+        rectMode(CENTER);
         rect(this.x, this.y, 50, 50);
-        rectMode(CORNER);        
+        rectMode(CORNER); 
     }
+} 
    
     especial() {
         if (frameCount % 90 == 0) {

@@ -48,8 +48,23 @@ function draw() {
 
   pacman.mostrar();
 
-  if (dist(pacman.x, pacman.y, fantasmaAmarillo.x, fantasmaAmarillo.y)<20) {
+  if (dist(pacman.x, pacman.y, fantasmaAmarillo.x, fantasmaAmarillo.y)<50) {
     fantasmaAmarillo.setAlive(false);
+    console.log("watafac pacman, te la comiste")
+  }
+
+  if (dist(pacman.x, pacman.y, fantasmaNaranja.x, fantasmaNaranja.y)<50) {
+    fantasmaNaranja.setAlive(false);
+    console.log("watafac pacman, te la comiste")
+  }
+
+   if (dist(pacman.x, pacman.y, fantasmaRojo.x, fantasmaRojo.y)<50) {
+    fantasmaRojo.setAlive(false);
+    console.log("watafac pacman, te la comiste")
+  }
+
+  if (dist(pacman.x, pacman.y, fantasmaVerde.x, fantasmaVerde.y)<50) {
+   fantasmaVerde.setAlive(false);
     console.log("watafac pacman, te la comiste")
   }
 

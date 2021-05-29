@@ -8,10 +8,12 @@ class FantasmaRojo extends Fantasma{
     this.b = b;
 }
 mostrar() {
-    fill(255, 0, 0);
-    rectMode(CENTER);
-    rect(this.x, this.y, 50, 50);
-    rectMode(CORNER);        
+    if(this.alive){
+        fill(255, 0, 0); // por qué no usar el rgb ?
+        rectMode(CENTER);
+        rect(this.x, this.y, 50, 50);
+        rectMode(CORNER); 
+    }        
 }
 
 especial() {
