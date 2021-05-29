@@ -36,22 +36,20 @@ function draw() {
   }*/
 
   fantasmaVerde.mostrar()
-  fantasmaAmarillo.mostrar(true)
+  fantasmaAmarillo.mostrar()
   fantasmaRojo.mostrar()
   fantasmaNaranja.mostrar()
-
   fantasmaRojo.mover()
   fantasmaVerde.mover()
   fantasmaAmarillo.mover()
   fantasmaNaranja.mover()
  
-
   fantasmaVerde.getx();
 
   pacman.mostrar();
 
   if (dist(pacman.x, pacman.y, fantasmaAmarillo.x, fantasmaAmarillo.y)<20) {
-    fantasmaAmarillo.mostrar(false);
+    fantasmaAmarillo.setAlive(false);
     console.log("watafac pacman, te la comiste")
   }
 

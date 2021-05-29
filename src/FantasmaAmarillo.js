@@ -5,20 +5,18 @@ class FantasmaAmarillo extends Fantasma{
         this.dir = dir;
         this.r = r;
         this.g = g;
-        this.b = b;
-        
-        this.mostrando = true;
+        this.b = b;        
+        this.alive = true;
     }
 
-    mostrar(chontaduro){
-        if(chontaduro == true){
-        
-        fill(255, 177, 187);
-        rectMode(CENTER);
-        rect(this.x, this.y, 50, 50);
-        rectMode(CORNER);        
+    mostrar(){
+        if(this.alive){
+            fill(255, 177, 187); // por qué no usar el rgb ?
+            rectMode(CENTER);
+            rect(this.x, this.y, 50, 50);
+            rectMode(CORNER); 
+        }
     
-    }
   }
     
     especial() {

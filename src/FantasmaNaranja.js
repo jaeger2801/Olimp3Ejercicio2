@@ -1,17 +1,20 @@
 class FantasmaNaranja extends Fantasma{
 
-    constructor(x, y,dir,r,g,b){
+    constructor(x, y,dir,r,g,b){ // los parámetros RGB no se están usando...
         super(x,y);
         this.dir = dir;
         this.r = 235;
         this.g = 164;
         this.b = 52;
+       
     }
     mostrar(){
-        fill(this.r, this.g, this.b);
-        rectMode(CENTER);
-        rect(this.x, this.y, 50, 50);
-        rectMode(CORNER);        
+        if(this.alive){ // esto mismo deben hacerlo en los otros fantasmas y métodos.
+            fill(this.r, this.g, this.b);
+            rectMode(CENTER);
+            rect(this.x, this.y, 50, 50);
+            rectMode(CORNER);        
+        }
     }
     
     especial() {
